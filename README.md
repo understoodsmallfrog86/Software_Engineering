@@ -19,174 +19,61 @@
 # Лабораторные работа 1
 ## Создайте две переменные, значение которых будете вводить через консоль. Также составьте условие, в котором созданные ранее переменные будут сравниваться, если условие выполняется, то выведете в консоль «Выполняется», если нет, то «Не выполняется».
 
-```python
-mellow = int(input('Введите значение первой переменной: '))
-mellon = int(input('Введите значение второй переменной: '))
-if mellow > mellon:
-    print('Выполняется')
+one = int(input('Enter the value of the first variable: '))
+two = int(input('Enter the value of the second variable: '))
+if one >= two:
+    print('In progress')
 else:
-    print('Не выполняется')
-```
-
-### Результат
-<img width="792" height="335" alt="image" src="https://github.com/user-attachments/assets/c67774ab-ce9d-433f-a4ee-81de6a0fbd48" />
+    print('Not in progress')
 
 
 # Лабораторные работа 2
 ## Напишите программу, которая будет определять значения переменной меньше 0, больше 0 и меньше 10 или больше 10. Это нужно реализовать при помощи одной переменной, значение которой будет вводится через консоль, а также при помощи конструкций if, elif, else.
 
-```python
-mellow = int(input('Введите значение переменной: '))
-if mellow < 0:
-    print('Переменная меньше 0')
-elif 0 < mellow < 10:
+one = int(input("Введите значение переменной "))
+if one < 0:
+        print('Переменная меньше 0')
+elif 0 < one < 10:
     print('Переменная больше 0 и меньше 10')
 else:
     print('Переменная больше 10')
-```
-
-### Результат
-<img width="983" height="335" alt="image" src="https://github.com/user-attachments/assets/be9c90ed-e61c-4ebc-b143-6208e9fa863d" />
-
 
 # Лабораторные работа 3
 ## Напишите программу, в которой будет проверяться есть ли переменная в указанном массиве используя логический оператор in. Самостоятельно посмотрите, как работает программа со значениями которых нет в массиве numbers.
-```python
-red = [1, 3, 6, 7, 8, 9, 18]
-mellow = int(input('Введите значение переменной: '))
-if mellow in red:
+numbers = [1, 3, 4, 6, 8, 9]
+value = int(input('Введите значение переменной: '))
+if value in numbers:
     print('Переменная есть в данном массиве')
 else:
     print('Переменной нет в этом массиве')
-```
-### Результат
-<img width="829" height="275" alt="image" src="https://github.com/user-attachments/assets/895f91ef-ff08-45e2-86f9-49cc60d6583a" />
-
 
 # Лабораторные работа 4
 ## Напишите программу, которая будет определять находится ли переменная в указанном массиве и если да, то проверьте четная она или нет. Самостоятельно протестируйте данную программу с разными значениями переменной value.
 
-```python
-red = [1, 3, 6, 7, 8, 9, 18]
-mellow = int(input('Введите значение переменной: '))
-if mellow in red:
-    if mellow % 2 == 0:
-        print('Переменная чётная и есть в массиве')
+numbers = [1, 3, 4, 6, 8, 9, 15, 16, 73, 321, 322]
+value = int(input('Введите значение переменной: '))
+if value in numbers:
+    if value % 2 == 0:
+        print('Переменная четная и есть в массиве numbers')
     else:
-        print('Переменная нечётная и есть в массиве')
+        print('Переменная нечетная и есть в массиве numbers')
 else:
-    print(f"Переменной нет в этом массиве и она равна {red}")
-```
-
-### Результат
-<img width="942" height="344" alt="image" src="https://github.com/user-attachments/assets/c0a4e91d-5cee-40ec-93db-90422044e537" />
-
+    print(f"Переменной нет в массиве numbers и она равна {value}")
 
 # Лабораторные работа 5
 ## Напишите программу, в которой циклом for значения переменной i будут меняться от 0 до 10 и посмотрите, как разные виды сравнений и операций работают в цикле.
-
-```python
-for mellon in range(10):
-    print ('mellon = ', mellon)
-    if mellon == 0:
-        mellon += 2
-    if mellon == 1:
-        continue
-    if mellon == 2 or mellon == 3:
-        print ('Переменная равна 2 или 3')
-    elif mellon in [4, 5, 6]:
-        print ('Переменная равна 4, 5 или 6')
-    else:
-        break
-```
-
-### Результат
-<img width="990" height="581" alt="image" src="https://github.com/user-attachments/assets/adf9701a-afb8-4760-bd7b-41d8509eb3c5" />
-
-
-# Лабораторные работа 6
-## Напишите программу, в которой при помощи цикла for определяется есть ли переменная value в строке string и посмотрите, как работает оператор else для циклов. Самостоятельно посмотрите, что выведет программа, если значение переменной value оказалось в строке string.
-```python
-mellon = 'Всем кого не видел ку!'
-red = input()
-for i in mellon:
-    if i in red:
-        index = mellon.find(red)
-        print(f"Буква '{red}' есть в строке под {index} индексом")
-        break
-else:
-    print(f"Буквы '{red}' нет в указанной строке")
-```
-### Результат
-<img width="1026" height="319" alt="image" src="https://github.com/user-attachments/assets/308b8bfe-8f3d-4259-87e8-dc2464844a9b" />
-
-
-# Лабораторные работа 7
-## Напишите программу, в которой вы наглядно посмотрите, как работает цикл for проходя в обратном порядке, то есть, к примеру не от 0 до 10, а от 10 до 0. В уже готовой программе показано вычитание из 100, а вам во время реализации программы будет необходимо придумать свой вариант применения обратного цикла.
-
-```python
-mellon = 1000
-for i in range (10, -1, -1):
-    mellon -= i
-    print(i, mellon)
-```
-### Результат
-<img width="1006" height="420" alt="image" src="https://github.com/user-attachments/assets/169f9fe0-e121-40d0-905c-7265a6d79ca2" />
-
-
-# Лабораторные работа 8
-## Напишите программу используя цикл while, внутри которого есть какие-либо проверки, но быть осторожным, поскольку циклы while при неправильно написанных условиях могут становится бесконечными, как указано в примере далее.
-
-```python
-mellon = 0
-while mellon < 100:
-    if mellon == 0:
-        mellon += 10
-    elif mellon // 5 > 1:
-        mellon *= 5
-    else:
-        mellon -= 5
-    print(mellon)
-```
-
-### Результат
-<img width="979" height="287" alt="image" src="https://github.com/user-attachments/assets/580555d0-8d61-4d7b-94e5-67ce50c9fe9d" />
-
-
-# Лабораторные работа 9
-## Напишите программу с использованием вложенных циклов и одной проверкой внутри них. 
-
-```python
-mellon = 0
 for i in range(10):
-    for j in range(10):
-        if i != j:
-            mellon += j
+        print('i = ', i)
+        if i == 0:
+            i += 2
+        if i == 1:
+            continue
+        if i == 2 or i == 3:
+            print('Переменная равна 2 или 3')
+        elif i in [4, 5, 6]:
+            print("Переменная равна 4,5 или 6")
         else:
-            pass
-print(mellon)
-```
-### Результат
-<img width="772" height="206" alt="image" src="https://github.com/user-attachments/assets/66ce47b1-4200-4089-b50d-da4447856e40" />
-
-
-# Лабораторные работа 10
-## Напишите программу с использованием flag, которое будет определять есть ли нечетное число в массиве. В данной задаче flag выступает в роли индикатора встречи нечетного числа в исходном массиве, четных чисел.
-
-```python
-mellon = [2, 6, 14, 18, 21]
-flag = False
-for i in mellon:
-    if i % 2 == 1:
-        flag = True
-if flag is True:
-    print('В массиве есть нечётное число')
-else:
-    print('В массиве все числа четные')
-```
-### Результат
-<img width="771" height="205" alt="image" src="https://github.com/user-attachments/assets/434c545a-d2a2-4b24-877f-5d1e69986679" />
-
+            break
 
 
 # Самостоятельная работа 1
